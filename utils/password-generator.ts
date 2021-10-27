@@ -1,4 +1,18 @@
-import { ConfigProps, characters } from './types';
+export interface ConfigProps {
+  length2: number;
+  numbers: boolean;
+  letters: boolean;
+  specialCharacters: boolean;
+  lockedSpecialCharacters: boolean;
+}
+
+export enum characters {
+  default = '',
+  numbers = '0123456789',
+  letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
+  specialCharacters = '!§$%/()´`^°*~#|,:._-€@',
+  lockedSpecialCharacters = '\\?"[{\'&>;+}=]<',
+}
 
 export class PasswordGenerator {
   private getRandomNumbers(length: number) {
@@ -32,11 +46,8 @@ export class PasswordGenerator {
   }
 
   private genChars(config: ConfigProps) {
-    delete (config as any).length;
     let chars = '';
-    if (!Object.values(config).includes(true)) {
-      return characters.default;
-    }
+
     if (config.numbers) {
       chars += characters.numbers;
     }

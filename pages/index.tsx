@@ -3,8 +3,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Input from '../components/Input';
 import { Button, Inner, Wrapper } from '../components/styles';
-import { PasswordGenerator } from '../utils/password-generator';
-import { characters } from '../utils/types';
+import { characters, PasswordGenerator } from '../utils/password-generator';
 
 const Home: NextPage = () => {
   const [value, setValue] = useState(characters.default as string);

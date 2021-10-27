@@ -1,7 +1,7 @@
 import copy from 'copy-to-clipboard';
-import React, { createRef, HTMLAttributes, useRef, useState } from 'react';
+import React, { createRef } from 'react';
 import { IoCopyOutline } from 'react-icons/io5';
-import { characters } from '../utils/types';
+import { characters } from '../utils/password-generator';
 import { InputE, InputWrapper, SquareButton } from './styles';
 
 const Input = ({ ...props }: any) => {
