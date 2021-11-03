@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   align-items: center;
   height: 100vh;
   width: 100%;
+  position: relative;
 `;
 
 export const Inner = styled.div`
@@ -25,6 +26,7 @@ export const InputWrapper = styled.div`
   border-radius: 8px;
   cursor: pointer;
   margin-bottom: 40px;
+  position: relative;
 
   ::hover {
     border-color: var(--color-accent);
@@ -37,7 +39,6 @@ export const InputE = styled.input`
   width: 100%;
   padding: 0px 20px;
   color: var(--color-primary-100);
-  cursor: pointer;
 
   ::placeholder {
     color: var(--color-primary-300);
@@ -73,4 +74,11 @@ export const Button = styled.button`
   :hover {
     background-color: var(--color-accent-hover);
   }
+`;
+
+export const TopEl = styled.div`
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 `;

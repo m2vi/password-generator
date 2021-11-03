@@ -95,3 +95,8 @@ body,
   outline: 0;
   box-shadow: none;
 }
+
+.Toastify__toast-container {
+  --toastify-toast-width: 80px;
+  padding: 0 !important;
+}
